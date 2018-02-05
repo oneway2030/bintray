@@ -86,7 +86,7 @@ task clean(type: Delete) {
 }
 ```
 
-## 四、配置bintray的apikey
+## 三、配置bintray的apikey
 因为`local.properties`是不会上传到git/svn等版本管理服务器上的，所以在项目的`local.properties`文件中填写密码等重要信息：
 ```
 bintray.apikey=xxxxxxxxxxxxxxx
