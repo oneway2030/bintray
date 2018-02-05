@@ -1,12 +1,12 @@
 # bintray
 简化发布Java/Android项目到Jcenter
 
-
+原文 为严振杰 这里学习使用 https://github.com/yanzhenjie/bintray/edit/master/Maven.md
 
 ## 一、依赖本库
 在项目中要发布的`module`下的`build.gradle`文件末尾应用本库。
 
-apply from: 'https://github.com/yanzhenjie/bintray/blob/master/maven.gradle?raw=true'
+apply from: 'https://raw.githubusercontent.com/oneway2030/bintray/master/bintray.gradle'
 ```
 它会先发布到Jcenter，并对发布内容进行签名，然后我们可以在Bintray控制台手动同步到Maven。
 
