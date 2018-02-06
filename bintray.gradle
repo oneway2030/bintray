@@ -8,16 +8,18 @@ def gitUrl = rootProject.ext.bintray.gitUrl   // Git仓库的url。
 
 // 唯一包名，比如compile 'com.yanzhenjie:andserver:1.0.1'中的com.yanzhenjie就是这里配置的。
 group = rootProject.ext.bintray.group
-
 install {
     repositories.mavenInstaller {
         // 生成pom.xml和参数
         pom {
             project {
+                artifactId rootProject.ext.bintray.artifactId
+                // 唯一包名，比如compile 'com.yanzhenjie:andserver:1.0.1'中的andserver就是这里配置的。
                 packaging rootProject.ext.bintray.packaging
                 // 项目描述，复制我的话，这里需要修改。
                 name rootProject.ext.bintray.name    // 可选，项目名称。
                 description rootProject.ext.bintray.description  // 可选，项目描述。
+
                 url siteUrl  // 项目主页，这里是引用上面定义好。
                 // 软件开源协议，现在一般都是Apache License2.0吧，复制我的，这里不需要修改。
                 licenses {
@@ -91,6 +93,7 @@ bintray {
         // 发布到Bintray上的项目名字，这里的名字不是compile 'com.yanzhenjie:andserver:1.0.1'中的andserver。
         userOrg = rootProject.ext.bintray.bintrayUser // Bintray的用户名，2016年11月更新。
         websiteUrl = siteUrl
+
         vcsUrl = gitUrl
         licenses = [rootProject.ext.bintray.bintrayLicense]
         publish = true  // 是否是公开项目。
