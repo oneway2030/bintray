@@ -13,13 +13,9 @@ install {
         // 生成pom.xml和参数
         pom {
             project {
-                artifactId rootProject.ext.bintray.artifactId
-                // 唯一包名，比如compile 'com.oneway:LogUtil:1.0.0'中的LogUtil就是这里配置的。
                 packaging rootProject.ext.bintray.packaging
-                // 项目描述，复制我的话，这里需要修改。
                 name rootProject.ext.bintray.name    // 可选，项目名称。
                 description rootProject.ext.bintray.description  // 可选，项目描述。
-
                 url siteUrl  // 项目主页，这里是引用上面定义好。
                 // 软件开源协议，现在一般都是Apache License2.0吧，复制我的，这里不需要修改。
                 licenses {
